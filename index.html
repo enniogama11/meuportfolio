@@ -1,283 +1,217 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio profissional com habilidades em TI, Desenvolvimento Web e Edição de Fotos">
-    <meta name="keywords" content="TI, Desenvolvedor Web, Front-End, Edição de Fotos, Cisco, IT Essentials">
-    <meta name="author" content="Enio Gama">
-    <title>Meu Portfólio Profissional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/LOGO1.jpg" type="image/x-icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfólio profissional Enio Gama — Técnico de Informática & Desenvolvedor Web" />
+  <title>Enio Gama — Portfólio</title>
+
+  <link rel="shortcut icon" href="img/LOGO1.jpg" type="image/x-icon">
+
+  <!-- Icons & fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<!-- Loader -->
-<div id="loader">
-  <div class="newtons-cradle">
-    <div class="newtons-cradle__dot"></div>
-    <div class="newtons-cradle__dot"></div>
-    <div class="newtons-cradle__dot"></div>
-    <div class="newtons-cradle__dot"></div>
-  </div>
-</div>
+<body class="dark">
+  <!-- background layer (full-screen) -->
+  <div class="bg-layer" aria-hidden="true"></div>
 
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <img src="img/LOGO1.jpg" alt="logo" class="brand-logo">
+        <span>Enio Gama</span>
+      </a>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <i class="fas fa-code"></i>
-                MeuPortfólio
-            </a>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio" class="active">Início</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li> <button><a href="#contato">Contacto</a></button> </li>
-            </ul>
+      <nav class="nav" id="mainNav">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#habilidades" class="nav-link">Habilidades</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#contato" class="nav-link btn-ghost">Contacto</a>
+      </nav>
+
+      <button id="menuToggle" class="hamburger" aria-label="Abrir menu">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-card glass">
+        <div class="hero-photo-wrap">
+          <img src="img/enniogama.jpg" alt="Enio Gama" class="hero-photo">
         </div>
-    </nav>
+        <div class="hero-text">
+          <h1>Olá, sou <strong>Enio Gama</strong></h1>
+          <p class="lead">Técnico de Informática • Suporte • Desenvolvedor Web</p>
+          <p class="muted">Manutenção | Redes | PHP, JS, HTML, CSS | IT Essentials (Cisco)</p>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Olá, eu sou <span style="color: var(--primary-color);">Enio Gama</span></h1>
-                <p>Especialista em Desenvolvimento Web, TI e Edição de Imagens</p>
-                <p class="subtitle">Transformo ideias em soluções digitais impactantes através de tecnologia criativa e inovadora.</p>
-                <div class="hero-buttons">
-                    <a href="#habilidades" class="btn btn-primary">Ver Habilidades</a>
-                    <a href="#portfolio" class="btn btn-secondary">Meus Projetos</a>
-                </div>
-            </div>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
+            <a href="#contato" class="btn btn-outline">Contratar</a>
+          </div>
+
+          <div class="social-inline">
+            <a href="https://github.com/enniogama11" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/%C3%A9nio-gama-ba3224287" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/eniogama_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- About Section -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="about-image fade-in">
-                <img src="img/enniogama.jpg" alt="Foto Profissional ennio_gama">
+      <div class="hero-features">
+        <ul class="features-list">
+          <li class="feature glass small">
+            <i class="fa fa-wrench"></i>
+            <div>
+              <h4>Manutenção</h4>
+              <p>Hardware & OS — Windows / Linux</p>
             </div>
-            <div class="about-content fade-in">
-                <h2>Sobre Mim</h2>
-                <p>Sou um profissional apaixonado por tecnologia com formação sólida em TI, desenvolvimento web e edição de imagens. Minha jornada começou quando criança, desmontando computadores para entender como funcionavam, e evoluiu para uma carreira dedicada à criação de soluções digitais inovadoras.</p>
-                <p>Com certificação IT Essentials da Cisco, habilidades avançadas em desenvolvimento front-end e experiência profissional em edição de fotos, ofereço uma combinação única de competências técnicas e criativas.</p>
-                <p>Acredito que a tecnologia deve ser acessível, funcional e esteticamente agradável. Meu objetivo é criar experiências digitais que não apenas resolvam problemas, mas também encantem os usuários.</p>
+          </li>
+
+          <li class="feature glass small">
+            <i class="fa fa-code"></i>
+            <div>
+              <h4>Web Dev</h4>
+              <p>PHP • JavaScript • HTML • CSS</p>
             </div>
+          </li>
+
+          <li class="feature glass small">
+            <i class="fa fa-network-wired"></i>
+            <div>
+              <h4>Redes</h4>
+              <p>Configuração Wi-Fi / Routers / IP</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section container">
+    <div class="two-col">
+      <div class="card glass fade-up">
+        <h2>Sobre Mim</h2>
+        <p>Formação técnica em Informática (Colégio Arco-Íris) — média final 15 valores. Certificado IT Essentials (Cisco). Sou apaixonado por tecnologia e por transformar desafios em soluções práticas. Procuro trabalhos freelance e projetos que valorizem qualidade e eficiência.</p>
+        <p class="muted">Objetivo: Técnico de Informática — suporte, manutenção e desenvolvimento web.</p>
+      </div>
+
+      <div class="card glass stats fade-up delay-1">
+        <div class="stat">
+          <h3>95%</h3>
+          <p>Hardware & Troubleshooting</p>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="habilidades" class="skills">
-        <div class="container">
-            <h2 class="fade-in">Minhas Habilidades</h2>
-            <div class="skills-grid">
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3 class="skill-title">IT Essentials da Cisco</h3>
-                    <p>Formação completa em fundamentos de TI, manutenção de hardware, configuração de sistemas e redes básicas.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="95%" style="width: 95%;"></div>
-                    </div>
-                    <ul style="text-align: left; padding-left: 20px;">
-                        <li>Manutenção e reparação de hardware</li>
-                        <li>Instalação e configuração de sistemas operacionais</li>
-                        <li>Solução de problemas técnicos</li>
-                        <li>Fundamentos de redes e segurança</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="skill-title">Desenvolvedor Web Front-End</h3>
-                    <p>Criação de interfaces web responsivas e intuitivas com as tecnologias mais modernas do mercado.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="60%" style="width: 90%;"></div>
-                    </div>
-                    <ul style="text-align: left; padding-left: 20px;">
-                        <li>HTML5, CSS3 e JavaScript (ES6+)</li>
-                       
-                        <li>Design responsivo e mobile-first</li>
-                      
-                    </ul>
-                </div>
-                
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">
-                        <i class="fas fa-camera-retro"></i>
-                    </div>
-                    <h3 class="skill-title">Editor de Fotos</h3>
-                    <p>Tratamento profissional de imagens, retoques criativos e composição visual de alta qualidade.</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="92%" style="width: 92%;"></div>
-                    </div>
-                    <ul style="text-align: left; padding-left: 20px;">
-                        <li>Adobe Photoshop e Lightroom</li>
-                        <li>Retoques e correções avançadas</li>
-                        <li>Composição e manipulação de imagens</li>
-                      
-                    </ul>
-                </div>
-            </div>
+        <div class="stat">
+          <h3>90%</h3>
+          <p>Photoshop / Edição</p>
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="fade-in">Meus Projetos</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img" style="background-image: url(https://i.imgur.com/p0aRAGZ.png);"></div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">Website E-commerce</h3>
-                        <p>Plataforma de comércio eletrônico completa com sistema de pagamento integrado e design responsivo.</p>
-                        <a href="https://lnkd.in/p/dAxKdn7x" class="btn btn-secondary portfolio-btn">Ver Projeto</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">Sistema de Gerenciamento</h3>
-                        <p>Aplicação web para gerenciamento de tarefas e projetos com painel administrativo intuitivo.</p>
-                        <a href="#" class="btn btn-secondary portfolio-btn">Ver Projeto</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="portfolio-info">
-                        <h3 class="portfolio-title">Campanha Publicitária</h3>
-                        <p>Edição profissional de fotos para campanha de marketing com tratamento avançado de cores.</p>
-                        <a href="#" class="btn btn-secondary portfolio-btn">Ver Projeto</a>
-                    </div>
-                </div>
-            </div>
+        <div class="stat">
+          <h3>85%</h3>
+          <p>Front-end</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="contact-info fade-in">
-                <h2>Entre em Contato</h2>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h3>Email</h3>
-                        <p>enniogama11@gmail.com</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div>
-                        <h3>Telefone</h3>
-                        <p>+244 936 459 748</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div>
-                        <h3>Localização</h3>
-                        <p>Luanda, Angola</p>
-                    </div>
-                </div>
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/%C3%A9nio-gama-ba3224287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/enniogama11" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/eniogama_?igsh=MWZuNWxmMnpnaHBiZg==" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/ennio_gama" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="contact-form fade-in">
-                <form  action="https://formspree.io/f/xldwkoen"
-  method="POST" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" class="form-control" placeholder="Seu nome completo">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="seu.email@exemplo.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Assunto</label>
-                        <input type="text" id="subject" class="form-control" placeholder="Qual é o assunto?">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" class="form-control" placeholder="Escreva sua mensagem aqui..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
-                </form>
-            </div>
+  <!-- Habilidades -->
+  <section id="habilidades" class="section container">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <div class="skills-grid">
+      <div class="skill glass fade-up">
+        <h4>Manutenção & Hardware</h4>
+        <div class="progress"><span style="width:95%"></span></div>
+      </div>
+      <div class="skill glass fade-up delay-1">
+        <h4>Redes & Cisco (IT Essentials)</h4>
+        <div class="progress"><span style="width:90%"></span></div>
+      </div>
+      <div class="skill glass fade-up delay-2">
+        <h4>Web (PHP, JS, HTML, CSS)</h4>
+        <div class="progress"><span style="width:85%"></span></div>
+      </div>
+      <div class="skill glass fade-up delay-3">
+        <h4>Photoshop / Edição</h4>
+        <div class="progress"><span style="width:92%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio" class="section container">
+    <h2 class="section-title">Projetos</h2>
+    <div class="portfolio-grid">
+      <!-- project card -->
+      <article class="project glass fade-up">
+        <div class="project-media" style="background-image: url('https://i.imgur.com/p0aRAGZ.png')"></div>
+        <div class="project-body">
+          <h3>Website E-commerce</h3>
+          <p>Plataforma de comércio com checkout integrado e painel administrativo.</p>
+          <a class="link" href="#" target="_blank">Ver</a>
         </div>
-    </section>
+      </article>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 ENIO GAMA. Todos os direitos reservados.</p>
-                <div class="footer-links">
-                    <a href="#inicio">Início</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#habilidades">Habilidades</a>
-                    <a href="#portfolio">Portfólio</a>
-                    <a href="#contato">Contacto</a>
-                </div>
-                <p class="copyright">Desenvolvido com <i class="fas fa-heart" style="color: #e74c3c;"></i> por Enio Gama</p>
-            </div>
+      <article class="project glass fade-up delay-1">
+        <div class="project-media" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c');"></div>
+        <div class="project-body">
+          <h3>Sistema de Gestão</h3>
+          <p>Aplicação para gestão de tarefas e utilizadores.</p>
+          <a class="link" href="#">Ver</a>
         </div>
-    </footer>
-    <script>
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    loader.style.opacity = '0';
-    loader.style.transition = 'opacity 0.5s ease';
+      </article>
 
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 500); // tempo para sumir suavemente
-  });
-</script>
+      <article class="project glass fade-up delay-2">
+        <div class="project-media" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166');"></div>
+        <div class="project-body">
+          <h3>Campanha Publicitária</h3>
+          <p>Edição avançada de imagens para marketing.</p>
+          <a class="link" href="#">Ver</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <!-- Contact -->
+  <section id="contato" class="section container">
+    <h2 class="section-title">Contacto</h2>
+    <div class="two-col">
+      <div class="card glass fade-up">
+        <h3>Vamos falar?</h3>
+        <p>Email: <a href="mailto:enniogama11@gmail.com">enniogama11@gmail.com</a></p>
+        <p>Telefone: +244 936 459 748</p>
+        <p>Local: Luanda, Angola</p>
+        <div class="social-inline">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
 
+      <form class="card glass contact-form fade-up delay-1" id="contactForm">
+        <label><span>Nome</span><input type="text" name="name" required></label>
+        <label><span>Email</span><input type="email" name="email" required></label>
+        <label><span>Mensagem</span><textarea name="message" rows="5" required></textarea></label>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <a class="btn btn-outline" href="mailto:enniogama11@gmail.com">Enviar por Email</a>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Enio Gama — Técnico de Informática</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>

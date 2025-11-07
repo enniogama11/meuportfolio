@@ -1,86 +1,45 @@
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('mainNav');
+menuToggle?.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
 
-  // Navegação suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-                
-                // Atualizar link ativo
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.classList.remove('active');
-                });
-                this.classList.add('active');
-            });
-        });
+// Smooth scrolling & active links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    document.querySelectorAll('.nav-link').forEach(n=>n.classList.remove('active'));
+    a.classList.add('active');
+  });
+});
 
-        // Destaque do link ativo ao rolar
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Efeito de navbar ao rolar
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+// simple scroll reveal (IntersectionObserver)
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('appear');
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
 
-        // Menu mobile
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+document.querySelectorAll('.fade-up').forEach(el=> io.observe(el));
 
-        // Animações ao rolar
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
+// small parallax for background on scroll
+const bg = document.querySelector('.bg-layer');
+window.addEventListener('scroll',()=>{
+  const y = window.scrollY;
+  if(bg) bg.style.transform = `translateY(${y * 0.06}px) scale(1.02)`;
+});
 
-        // Formulário de contato (sem backend)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Em breve entrarei em contato.');
-            this.reset();
-        });
+// contact form (no backend)
+const contactForm = document.getElementById('contactForm');
+contactForm?.addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Mensagem enviada! Vou responder em breve — obrigado 😊');
+  this.reset();
+});

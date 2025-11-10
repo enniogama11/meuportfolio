@@ -1,217 +1,304 @@
-<!doctype html>
-<html lang="pt-pt">
+<!DOCTYPE html>
+<html lang="pt-PT">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Portfólio profissional Enio Gama — Técnico de Informática & Desenvolvedor Web" />
-  <title>Enio Gama — Portfólio</title>
-
-  <link rel="shortcut icon" href="img/LOGO1.jpg" type="image/x-icon">
-
-  <!-- Icons & fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de Enio Gama - Técnico de Informática e Desenvolvedor Web">
+    <meta name="theme-color" content="#0f172a">
+    <title>Enio Gama — Portfólio Premium</title>
+    <link rel="icon" type="image/jpeg" href="img/LOGO1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark">
-  <!-- background layer (full-screen) -->
-  <div class="bg-layer" aria-hidden="true"></div>
+    <!-- Background with overlay -->
+    <div class="bg-layer" style="background-image: url('img/p0aRAGZ.png');" aria-hidden="true"></div>
 
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio">
-        <img src="img/LOGO1.jpg" alt="logo" class="brand-logo">
-        <span>Enio Gama</span>
-      </a>
+    <!-- Content -->
+    <div class="content">
+        <!-- Header/Navigation -->
+        <header class="site-header">
+            <div class="container header-inner">
+                <!-- Logo -->
+                <a href="#inicio" class="brand">
+                    <img src="img/LOGO1.jpg" alt="Logo" class="brand-logo">
+                    <span class="brand-text">Enio Gama</span>
+                </a>
 
-      <nav class="nav" id="mainNav">
-        <a href="#inicio" class="nav-link active">Início</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#habilidades" class="nav-link">Habilidades</a>
-        <a href="#portfolio" class="nav-link">Portfólio</a>
-        <a href="#contato" class="nav-link btn-ghost">Contacto</a>
-      </nav>
+                <!-- Desktop Navigation -->
+                <nav class="nav" id="mainNav">
+                    <a href="#inicio" class="nav-link active">Início</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#habilidades" class="nav-link">Habilidades</a>
+                    <a href="#portfolio" class="nav-link">Portfólio</a>
+                    <a href="#contato" class="nav-link">Contacto</a>
+                </nav>
 
-      <button id="menuToggle" class="hamburger" aria-label="Abrir menu">
-        <i class="fa fa-bars"></i>
-      </button>
-    </div>
-  </header>
+                <!-- Download CV Button -->
+                <a href="#" class="btn-cv" onclick="alert('CV será disponibilizado em breve!'); return false;">
+                    <i class="fas fa-download"></i>
+                    <span>CV</span>
+                </a>
 
-  <!-- Hero -->
-  <section id="inicio" class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-card glass">
-        <div class="hero-photo-wrap">
-          <img src="img/enniogama.jpg" alt="Enio Gama" class="hero-photo">
-        </div>
-        <div class="hero-text">
-          <h1>Olá, sou <strong>Enio Gama</strong></h1>
-          <p class="lead">Técnico de Informática • Suporte • Desenvolvedor Web</p>
-          <p class="muted">Manutenção | Redes | PHP, JS, HTML, CSS | IT Essentials (Cisco)</p>
-
-          <div class="hero-cta">
-            <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
-            <a href="#contato" class="btn btn-outline">Contratar</a>
-          </div>
-
-          <div class="social-inline">
-            <a href="https://github.com/enniogama11" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/%C3%A9nio-gama-ba3224287" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/eniogama_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-features">
-        <ul class="features-list">
-          <li class="feature glass small">
-            <i class="fa fa-wrench"></i>
-            <div>
-              <h4>Manutenção</h4>
-              <p>Hardware & OS — Windows / Linux</p>
+                <!-- Mobile Menu Button -->
+                <button id="menuToggle" class="hamburger" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-          </li>
 
-          <li class="feature glass small">
-            <i class="fa fa-code"></i>
-            <div>
-              <h4>Web Dev</h4>
-              <p>PHP • JavaScript • HTML • CSS</p>
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="navMobile">
+                <a href="#inicio" class="nav-link-mobile">Início</a>
+                <a href="#sobre" class="nav-link-mobile">Sobre</a>
+                <a href="#habilidades" class="nav-link-mobile">Habilidades</a>
+                <a href="#portfolio" class="nav-link-mobile">Portfólio</a>
+                <a href="#contato" class="nav-link-mobile">Contacto</a>
+                <a href="#" class="nav-link-mobile" onclick="alert('CV será disponibilizado em breve!'); return false;">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content scroll-reveal">
+                    <h1 class="hero-title">Olá, sou <span class="text-gradient">Enio Gama</span></h1>
+                    <p class="hero-subtitle">Técnico de Informática • Desenvolvedor Web</p>
+                    <p class="hero-description">Especializado em manutenção de hardware, redes e desenvolvimento web. Transformo desafios técnicos em soluções elegantes e eficientes.</p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta">
+                        <a href="#portfolio" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-secondary">Contactar</a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://github.com/enniogama11" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/%C3%A9nio-gama-ba3224287" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eniogama_" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="hero-image scroll-reveal delay-200">
+                    <div class="glass-lg">
+                        <img src="img/enniogama.jpg" alt="Enio Gama" class="profile-img">
+                    </div>
+                </div>
             </div>
-          </li>
 
-          <li class="feature glass small">
-            <i class="fa fa-network-wired"></i>
-            <div>
-              <h4>Redes</h4>
-              <p>Configuração Wi-Fi / Routers / IP</p>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
             </div>
-          </li>
-        </ul>
-      </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card glass-sm scroll-reveal">
+                        <div class="feature-icon">🔧</div>
+                        <h3 class="feature-title">Manutenção</h3>
+                        <p class="feature-desc">Hardware & OS — Windows / Linux</p>
+                    </div>
+                    <div class="feature-card glass-sm scroll-reveal delay-100">
+                        <div class="feature-icon">💻</div>
+                        <h3 class="feature-title">Web Dev</h3>
+                        <p class="feature-desc">PHP • JavaScript • HTML • CSS</p>
+                    </div>
+                    <div class="feature-card glass-sm scroll-reveal delay-200">
+                        <div class="feature-icon">🌐</div>
+                        <h3 class="feature-title">Redes</h3>
+                        <p class="feature-desc">Configuração Wi-Fi / Routers / IP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-card glass-lg scroll-reveal">
+                        <p class="about-text">Formação técnica em Informática pelo Colégio Arco-Íris com média final de 15 valores. Certificado em IT Essentials pela Cisco.</p>
+                        <p class="about-text">Sou apaixonado por tecnologia e por transformar desafios em soluções práticas. Procuro trabalhos freelance e projetos que valorizem qualidade e eficiência.</p>
+                        <p class="about-text muted">Objetivo: Técnico de Informática — suporte, manutenção e desenvolvimento web de alta qualidade.</p>
+                    </div>
+
+                    <div class="stats-card glass-lg scroll-reveal delay-200">
+                        <div class="stat-item">
+                            <h4 class="stat-label">Hardware & Troubleshooting</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="stat-value">95%</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="stat-label">Photoshop / Edição</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="stat-value">90%</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="stat-label">Front-end Development</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="stat-value">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Section -->
+        <section id="habilidades" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass-sm scroll-reveal">
+                        <h4 class="skill-title">Manutenção & Hardware</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-sm scroll-reveal delay-100">
+                        <h4 class="skill-title">Redes & Cisco (IT Essentials)</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-sm scroll-reveal delay-200">
+                        <h4 class="skill-title">Web (PHP, JS, HTML, CSS)</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-sm scroll-reveal delay-300">
+                        <h4 class="skill-title">Photoshop / Edição</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Projetos</h2>
+                <div class="portfolio-grid">
+                    <article class="project-card glass-sm scroll-reveal">
+                        <div class="project-image" style="background-image: url('img/p0aRAGZ.png')"></div>
+                        <div class="project-body">
+                            <h3 class="project-title">Website E-commerce</h3>
+                            <p class="project-desc">Plataforma de comércio com checkout integrado e painel administrativo.</p>
+                            <a href="#" class="project-link">Ver Projeto →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-sm scroll-reveal delay-100">
+                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=500&fit=crop')"></div>
+                        <div class="project-body">
+                            <h3 class="project-title">Sistema de Gestão</h3>
+                            <p class="project-desc">Aplicação para gestão de tarefas e utilizadores com interface intuitiva.</p>
+                            <a href="#" class="project-link">Ver Projeto →</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-sm scroll-reveal delay-200">
+                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&h=500&fit=crop')"></div>
+                        <div class="project-body">
+                            <h3 class="project-title">Campanha Publicitária</h3>
+                            <p class="project-desc">Edição avançada de imagens para marketing e branding.</p>
+                            <a href="#" class="project-link">Ver Projeto →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contato" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info glass-lg scroll-reveal">
+                        <h3 class="contact-title">Vamos falar?</h3>
+                        <div class="contact-details">
+                            <p class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <a href="mailto:enniogama11@gmail.com" class="contact-link">enniogama11@gmail.com</a>
+                            </p>
+                            <p class="contact-item">
+                                <span class="contact-label">Telefone:</span>
+                                +244 936 459 748
+                            </p>
+                            <p class="contact-item">
+                                <span class="contact-label">Local:</span>
+                                Luanda, Angola
+                            </p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/%C3%A9nio-gama-ba3224287" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/enniogama11" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper glass-lg scroll-reveal delay-200">
+                        <div id="formStatus" class="form-status"></div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea id="message" name="message" placeholder="Sua mensagem aqui..." class="form-input form-textarea" rows="5" required></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary" id="submitBtn">Enviar Mensagem</button>
+                                <a href="mailto:enniogama11@gmail.com" class="btn btn-secondary">Enviar por Email</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <p class="footer-text">© 2025 Enio Gama — Técnico de Informática & Desenvolvedor Web</p>
+            </div>
+        </footer>
     </div>
-  </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="section container">
-    <div class="two-col">
-      <div class="card glass fade-up">
-        <h2>Sobre Mim</h2>
-        <p>Formação técnica em Informática (Colégio Arco-Íris) — média final 15 valores. Certificado IT Essentials (Cisco). Sou apaixonado por tecnologia e por transformar desafios em soluções práticas. Procuro trabalhos freelance e projetos que valorizem qualidade e eficiência.</p>
-        <p class="muted">Objetivo: Técnico de Informática — suporte, manutenção e desenvolvimento web.</p>
-      </div>
-
-      <div class="card glass stats fade-up delay-1">
-        <div class="stat">
-          <h3>95%</h3>
-          <p>Hardware & Troubleshooting</p>
-        </div>
-        <div class="stat">
-          <h3>90%</h3>
-          <p>Photoshop / Edição</p>
-        </div>
-        <div class="stat">
-          <h3>85%</h3>
-          <p>Front-end</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Habilidades -->
-  <section id="habilidades" class="section container">
-    <h2 class="section-title">Habilidades Técnicas</h2>
-    <div class="skills-grid">
-      <div class="skill glass fade-up">
-        <h4>Manutenção & Hardware</h4>
-        <div class="progress"><span style="width:95%"></span></div>
-      </div>
-      <div class="skill glass fade-up delay-1">
-        <h4>Redes & Cisco (IT Essentials)</h4>
-        <div class="progress"><span style="width:90%"></span></div>
-      </div>
-      <div class="skill glass fade-up delay-2">
-        <h4>Web (PHP, JS, HTML, CSS)</h4>
-        <div class="progress"><span style="width:85%"></span></div>
-      </div>
-      <div class="skill glass fade-up delay-3">
-        <h4>Photoshop / Edição</h4>
-        <div class="progress"><span style="width:92%"></span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfólio -->
-  <section id="portfolio" class="section container">
-    <h2 class="section-title">Projetos</h2>
-    <div class="portfolio-grid">
-      <!-- project card -->
-      <article class="project glass fade-up">
-        <div class="project-media" style="background-image: url('https://i.imgur.com/p0aRAGZ.png')"></div>
-        <div class="project-body">
-          <h3>Website E-commerce</h3>
-          <p>Plataforma de comércio com checkout integrado e painel administrativo.</p>
-          <a class="link" href="#" target="_blank">Ver</a>
-        </div>
-      </article>
-
-      <article class="project glass fade-up delay-1">
-        <div class="project-media" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c');"></div>
-        <div class="project-body">
-          <h3>Sistema de Gestão</h3>
-          <p>Aplicação para gestão de tarefas e utilizadores.</p>
-          <a class="link" href="#">Ver</a>
-        </div>
-      </article>
-
-      <article class="project glass fade-up delay-2">
-        <div class="project-media" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166');"></div>
-        <div class="project-body">
-          <h3>Campanha Publicitária</h3>
-          <p>Edição avançada de imagens para marketing.</p>
-          <a class="link" href="#">Ver</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contato" class="section container">
-    <h2 class="section-title">Contacto</h2>
-    <div class="two-col">
-      <div class="card glass fade-up">
-        <h3>Vamos falar?</h3>
-        <p>Email: <a href="mailto:enniogama11@gmail.com">enniogama11@gmail.com</a></p>
-        <p>Telefone: +244 936 459 748</p>
-        <p>Local: Luanda, Angola</p>
-        <div class="social-inline">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-
-      <form class="card glass contact-form fade-up delay-1" id="contactForm">
-        <label><span>Nome</span><input type="text" name="name" required></label>
-        <label><span>Email</span><input type="email" name="email" required></label>
-        <label><span>Mensagem</span><textarea name="message" rows="5" required></textarea></label>
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Enviar</button>
-          <a class="btn btn-outline" href="mailto:enniogama11@gmail.com">Enviar por Email</a>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Enio Gama — Técnico de Informática</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js" defer></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

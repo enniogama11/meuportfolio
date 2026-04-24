@@ -134,9 +134,11 @@ body.dark {
     top: 0;
     width: 100%;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
+    background: rgba(15, 23, 42, 0.75); /* Fundo mais escuro para contraste */
+    backdrop-filter: blur(12px) saturate(180%); /* Blur mais intenso e saturação */
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
@@ -277,8 +279,9 @@ body.dark {
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
+    background: rgba(15, 23, 42, 0.95); /* Mobile menu mais sólido para evitar confusão */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem 0;
     flex-direction: column;

@@ -15,6 +15,32 @@
 </head>
 <body class="dark">
     <!-- Circuit Board Loader - High Tech Animation -->
+    <style>
+      .loader-wrapper {
+        position: fixed;
+        inset: 0;
+        background: #08090a; /* Fallback para a cor de fundo */
+        background: oklch(0.08 0.005 285.823);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease, visibility 0.5s;
+      }
+      .loader-container {
+        width: 100%;
+        max-width: 600px;
+        padding: 0 1rem;
+        text-align: center;
+      }
+      .circuit-loader {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
     <div id="loader" class="loader-wrapper">
       <div class="loader-container">
         <svg class="circuit-loader" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">

@@ -1041,26 +1041,15 @@ body.dark {
 
 /* Page Loader - Circuit Board */
 .loader-wrapper {
-    position: fixed;
-    inset: 0;
-    background: var(--background);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease, visibility 0.5s;
+    /* Estilos base movidos para inline no HTML para evitar FOUC */
+    opacity: 1;
+    visibility: visible;
 }
 
-.loader-container {
-    width: 100%;
-    max-width: 600px;
-    padding: 0 1rem;
-}
-
+/* Otimização de renderização para o SVG */
 .circuit-loader {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* Trace Paths Animation */

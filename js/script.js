@@ -127,7 +127,7 @@ magneticElements.forEach(el => {
     });
 });
 
-const tiltCards = document.querySelectorAll('.project-card, .skill-card');
+const tiltCards = document.querySelectorAll('.project-card');
 tiltCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const pos = card.getBoundingClientRect();

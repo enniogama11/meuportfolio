@@ -1309,3 +1309,118 @@ body.dark {
   font-family: monospace;
   color: #00a2ff;
 }
+
+/* ===========================
+   NEW SKILLS CARDS (UIVERSE)
+   =========================== */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.card {
+  width: 250px;
+  height: 150px;
+  padding: 0.5rem;
+  background: rgba(198, 198, 198, 0.15);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px rgba(255, 255, 255, 0.3) outset;
+  box-shadow: -20px 30px 20px rgba(0, 0, 0, 0.2);
+  transform: skewX(10deg);
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card:hover, .card.active {
+  height: 300px;
+  transform: skew(0deg) scale(1.05);
+  background: rgba(198, 198, 198, 0.25);
+}
+
+.align {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-self: flex-start;
+}
+
+.red, .yellow, .green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.red { background-color: #ff605c; }
+.yellow { background-color: #ffbd44; }
+.green { background-color: #00ca4e; }
+
+.card-icon-container {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 3rem;
+  color: #6699ff;
+  transition: .4s;
+}
+
+.card:hover .card-icon-container, .card.active .card-icon-container {
+  transform: scale(0.8);
+  margin: 0.5rem 0;
+}
+
+.card h2 {
+  text-align: center;
+  margin: 0.5rem;
+  color: rgb(218, 244, 237);
+  text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+}
+
+.card .content-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .4s ease;
+  padding: 0 1.5rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.card:hover .content-text, .card.active .content-text {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.card .content-text p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card .tech-badges-mini {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .card {
+    transform: skewX(0deg);
+    width: 100%;
+    max-width: 320px;
+  }
+}

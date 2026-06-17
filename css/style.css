@@ -1424,3 +1424,108 @@ body.dark {
     max-width: 320px;
   }
 }
+
+/* ===========================
+   DOWNLOAD BUTTON (Tsiangana)
+   =========================== */
+
+.btn-cv-link {
+    text-decoration: none;
+    display: none; /* Mantém o comportamento responsivo original */
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .btn-cv-link {
+        display: flex;
+    }
+}
+
+.botao {
+  width: 140px; /* Aumentado ligeiramente para caber "Download CV" */
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px rgba(107, 221, 215, 0.37);
+  padding: 5px 10px;
+  background-color: rgb(59, 190, 230);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 505;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
+  transition: 0.5s linear;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao .mysvg {
+  display: none;
+}
+
+.botao:hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.5s linear;
+}
+
+.botao:hover .texto {
+  display: none;
+}
+
+.botao:hover .mysvg {
+  display: inline;
+}
+
+.botao:hover::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background-color: rgb(59, 190, 230);
+  margin-left: 0px; /* Ajustado para centralizar no círculo */
+  animation: animate 0.9s linear infinite;
+  bottom: 15px;
+}
+
+.botao:hover::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border: 3.5px solid transparent;
+  border-top: 3.5px solid #fff;
+  border-right: 3.5px solid #fff;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+  box-sizing: border-box;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}

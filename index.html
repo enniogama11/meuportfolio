@@ -40,6 +40,21 @@
         display: block;
         margin: 0 auto;
       }
+      .trace-bg {
+        stroke: #252525;
+        stroke-width: 1.8;
+        fill: none;
+      }
+      .trace-flow {
+        stroke-width: 1.8;
+        fill: none;
+        stroke-dasharray: 40 400;
+        stroke-dashoffset: 438;
+        animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+      }
+      .blue2 { stroke: #399fff; filter: drop-shadow(0 0 6px #399fff); }
+      .blue { stroke: #399fff; filter: drop-shadow(0 0 6px #399fff); }
+      @keyframes flow { to { stroke-dashoffset: 0; } }
     </style>
     <div id="loader" class="loader-wrapper">
       <div class="loader-container">

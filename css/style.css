@@ -29,6 +29,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 body {
@@ -37,6 +39,10 @@ body {
     color: var(--foreground);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 body.dark {
@@ -87,6 +93,7 @@ body.dark {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -411,17 +418,11 @@ body.dark {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 8vw, 3.75rem);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -1.5px;
-}
-
-@media (min-width: 768px) {
-    .hero-title {
-        font-size: 3.75rem;
-    }
 }
 
 .text-gradient {

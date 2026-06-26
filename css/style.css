@@ -430,7 +430,7 @@ body.dark {
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: clamp(2.8rem, 9vw, 4rem);
+        font-size: clamp(2.8rem, 9vw, 4.375rem);
         line-height: 0.95;
         margin-bottom: 1rem;
     }

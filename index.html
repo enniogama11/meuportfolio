@@ -313,6 +313,7 @@
                                     animation: drawText 3s ease-in-out infinite;
                                     stroke-dasharray: 1000;
                                     stroke-dashoffset: 1000;
+                                    font-size: clamp(2.8rem, 9vw, 4.5rem);
                                 }
                                 @keyframes drawText {
                                     0% {
@@ -323,16 +324,6 @@
                                     }
                                     100% {
                                         stroke-dashoffset: -1000;
-                                    }
-                                }
-                                @media (max-width: 768px) {
-                                    text {
-                                        font-size: 48px;
-                                    }
-                                }
-                                @media (max-width: 480px) {
-                                    text {
-                                        font-size: 36px;
                                     }
                                 }
                             </style>

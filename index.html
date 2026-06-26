@@ -296,16 +296,16 @@
             <div class="container hero-grid">
                 <div class="hero-content scroll-reveal">
                     <h1 class="hero-title">Olá, sou <span class="animated-name-loader">
-                        <svg height="0" width="0" viewBox="0 0 800 100" class="absolute">
+                        <svg height="0" width="0" viewBox="0 0 600 120" class="absolute">
                             <defs xmlns="http://www.w3.org/2000/svg">
-                                <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="100" x1="0" id="gradient-name">
+                                <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="120" x1="0" id="gradient-name">
                                     <stop stop-color="#6699ff"></stop>
                                     <stop stop-color="#4488ff" offset="1"></stop>
                                 </linearGradient>
                             </defs>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 100" height="80" width="auto" class="inline-block" style="max-width: 100%;">
-                            <text x="10" y="70" font-family="Inter, sans-serif" font-size="72" font-weight="800" stroke="url(#gradient-name)" stroke-width="2" fill="none" letter-spacing="-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 600 120" preserveAspectRatio="xMidYMid meet" height="auto" width="100%" class="animated-name-svg">
+                            <text x="300" y="85" font-family="Inter, sans-serif" font-size="72" font-weight="800" stroke="url(#gradient-name)" stroke-width="2" fill="none" text-anchor="middle" dominant-baseline="middle">
                                 Enio Gama
                             </text>
                             <style>
@@ -323,6 +323,16 @@
                                     }
                                     100% {
                                         stroke-dashoffset: -1000;
+                                    }
+                                }
+                                @media (max-width: 768px) {
+                                    text {
+                                        font-size: 48px;
+                                    }
+                                }
+                                @media (max-width: 480px) {
+                                    text {
+                                        font-size: 36px;
                                     }
                                 }
                             </style>

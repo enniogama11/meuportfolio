@@ -296,7 +296,37 @@
             <div class="container hero-grid">
                 <div class="hero-content scroll-reveal">
                     <h1 class="hero-title">Olá, sou <span class="animated-name-loader">
-                        <span class="text-gradient">Enio Gama...</span>
+                        <svg height="0" width="0" viewBox="0 0 800 100" class="absolute">
+                            <defs xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="100" x1="0" id="gradient-name">
+                                    <stop stop-color="#6699ff"></stop>
+                                    <stop stop-color="#4488ff" offset="1"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 100" height="80" width="auto" class="inline-block" style="max-width: 100%;">
+                            <text x="10" y="70" font-family="Inter, sans-serif" font-size="72" font-weight="800" stroke="url(#gradient-name)" stroke-width="2" fill="none" letter-spacing="-2">
+                                Enio Gama
+                            </text>
+                            <style>
+                                text {
+                                    animation: drawText 3s ease-in-out infinite;
+                                    stroke-dasharray: 1000;
+                                    stroke-dashoffset: 1000;
+                                }
+                                @keyframes drawText {
+                                    0% {
+                                        stroke-dashoffset: 1000;
+                                    }
+                                    50% {
+                                        stroke-dashoffset: 0;
+                                    }
+                                    100% {
+                                        stroke-dashoffset: -1000;
+                                    }
+                                }
+                            </style>
+                        </svg>
                     </span></h1>
                     <p class="hero-subtitle">Técnico de Informática • Desenvolvedor Web</p>
                     <p class="hero-description">Especializado em manutenção de hardware, redes e desenvolvimento web. Transformo desafios técnicos em soluções elegantes e eficientes.</p>

@@ -474,11 +474,24 @@ body.dark {
 .profile-img {
     width: 100%;
     height: auto;
+    max-width: 400px;
     border-radius: 1.75rem;
     object-fit: cover;
     aspect-ratio: 1;
     animation: float 6s ease-in-out infinite;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .profile-img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        max-width: 200px;
+    }
 }
 
 @keyframes float {
@@ -1215,20 +1228,25 @@ body.dark {
 }
 
 .Projects-Button {
-    width: fit-content;
-    height: 45px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 20px;
+    padding: 0.75rem 1.5rem;
     gap: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     cursor: pointer;
     background: linear-gradient(120deg, #6699ff, #4488ff);
     transition: all 0.3s;
     box-shadow: 0px 10px 10px rgba(102, 153, 255, 0.166);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    height: auto;
+    width: fit-content;
 }
 
 .IconContainer {
@@ -1292,4 +1310,110 @@ body.dark {
 
 .Projects-Button:active {
     transform: translateY(0px);
+}
+
+
+/* ===========================
+   ANIMATED NAME LOADER
+   =========================== */
+
+.animated-name-loader {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+    height: 1em;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.loader {
+    display: flex;
+    margin: 0.25em 0;
+}
+
+.w-2 {
+    width: 0.5em;
+}
+
+.dash {
+    animation: dashArray 2s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+}
+
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+        spin 8s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
 }

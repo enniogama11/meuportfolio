@@ -400,16 +400,19 @@ body.dark {
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     gap: 3rem;
     align-items: center;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     .hero-grid {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
+        text-align: left;
     }
 }
 
@@ -453,11 +456,19 @@ body.dark {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
 @media (min-width: 640px) {
     .hero-cta {
         flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-cta {
+        justify-content: flex-start;
     }
 }
 
@@ -480,17 +491,19 @@ body.dark {
     aspect-ratio: 1;
     animation: float 6s ease-in-out infinite;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .profile-img {
-        max-width: 280px;
+        max-width: 320px; /* Aumentado para melhor visualização */
     }
 }
 
 @media (max-width: 480px) {
     .profile-img {
-        max-width: 200px;
+        max-width: 260px; /* Aumentado para melhor visualização */
     }
 }
 
@@ -558,6 +571,13 @@ body.dark {
 .social-links {
     display: flex;
     gap: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .social-links {
+        justify-content: flex-start;
+    }
 }
 
 .social-icon {

@@ -61,107 +61,80 @@ function initTypewriter() {
 }
 
 // ===========================
-// ANIMATED COUNTERS
+// MAGNETIC BUTTONS & TILT CARDS
 // ===========================
-function animateCounters() {
-    const counters = document.querySelectorAll('.stat-value');
-    const speed = 200;
+const magneticElements = document.querySelectorAll('.btn, .social-icon');
 
-    counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target') || parseInt(counter.innerText);
-            if (!counter.hasAttribute('data-target')) {
-                counter.setAttribute('data-target', target);
-                counter.innerText = '0';
-            }
-            
-            const count = +counter.innerText.replace('%', '');
-            const inc = target / speed;
+function addRafMouseEffect(el, onFrame, resetStyle = '') {
+    let frameRequested = false;
+    let latestEvent = null;
 
-            if (count < target) {
-                counter.innerText = Math.ceil(count + inc) + (counter.innerText.includes('%') || counter.getAttribute('data-target').includes('%') ? '%' : '');
-                setTimeout(updateCount, 1);
-            } else {
-                counter.innerText = target + (counter.innerText.includes('%') ? '%' : '');
-            }
-        };
-        updateCount();
+    el.addEventListener('mousemove', (event) => {
+        latestEvent = event;
+        if (!frameRequested) {
+            frameRequested = true;
+            requestAnimationFrame(() => {
+                const pos = el.getBoundingClientRect();
+                const x = latestEvent.clientX - pos.left - pos.width / 2;
+                const y = latestEvent.clientY - pos.top - pos.height / 2;
+                onFrame(el, x, y, pos);
+                frameRequested = false;
+            });
+        }
+    });
+
+    el.addEventListener('mouseleave', () => {
+        el.style.transform = resetStyle;
+        frameRequested = false;
+        latestEvent = null;
     });
 }
 
-// ===========================
-// INTERSECTION OBSERVER (Reveal & Counters)
-// ===========================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            if (entry.target.classList.contains('stats-card')) {
-                animateCounters();
-            }
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-
-// ===========================
-// MAGNETIC BUTTONS & TILT CARDS
-// ===========================
-const magneticElements = document.querySelectorAll('.btn, .social-icon, .btn-cv');
 magneticElements.forEach(el => {
-    el.addEventListener('mousemove', (e) => {
-        const pos = el.getBoundingClientRect();
-        const x = e.clientX - pos.left - pos.width / 2;
-        const y = e.clientY - pos.top - pos.height / 2;
-        el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-    });
-    el.addEventListener('mouseleave', () => {
-        el.style.transform = 'translate(0px, 0px)';
-    });
+    addRafMouseEffect(el, (element, x, y) => {
+        element.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    }, 'translate(0px, 0px)');
 });
 
 const tiltCards = document.querySelectorAll('.project-card');
 tiltCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const pos = card.getBoundingClientRect();
-        const x = e.clientX - pos.left - pos.width / 2;
-        const y = e.clientY - pos.top - pos.height / 2;
+    addRafMouseEffect(card, (element, x, y, pos) => {
         const rX = (y / pos.height) * -10;
         const rY = (x / pos.width) * 10;
-        card.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.02, 1.02, 1.02)`;
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    });
+        element.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.02, 1.02, 1.02)`;
+    }, 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
 });
 
 // ===========================
 // MOBILE MENU
 // ===========================
-if (menuToggle) {
+if (menuToggle && navMobile) {
     menuToggle.addEventListener('click', () => {
         navMobile.classList.toggle('active');
         const icon = menuToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
     });
 }
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMobile.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
+if (navMobile && menuToggle) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMobile.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
     });
-});
+}
 
 // ===========================
 // FORM SUBMISSION

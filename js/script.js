@@ -24,7 +24,6 @@ window.addEventListener('load', () => {
             loader.style.opacity = '0';
             loader.style.visibility = 'hidden';
         }
-        initTypewriter();
     }, 1500);
 });
 
@@ -114,7 +113,7 @@ document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 // ===========================
 // MAGNETIC BUTTONS & TILT CARDS
 // ===========================
-const magneticElements = document.querySelectorAll('.btn, .social-icon, .btn-cv');
+const magneticElements = document.querySelectorAll('.btn, .social-icon, .btn-cv, .Projects-Button');
 magneticElements.forEach(el => {
     el.addEventListener('mousemove', (e) => {
         const pos = el.getBoundingClientRect();
@@ -183,13 +182,13 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                showFormStatus('✓ Mensagem enviada com sucesso!', 'success');
+                showFormStatus('Mensagem enviada com sucesso.', 'success');
                 contactForm.reset();
             } else {
-                showFormStatus('✗ Erro ao enviar. Tente novamente.', 'error');
+                showFormStatus('Não foi possível enviar. Tente novamente.', 'error');
             }
         } catch (err) {
-            showFormStatus('✗ Erro de conexão.', 'error');
+            showFormStatus('Erro de ligação. Tente novamente.', 'error');
         } finally {
             submitBtn.disabled = false;
             submitBtn.innerText = 'Enviar Mensagem';

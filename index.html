@@ -216,7 +216,7 @@
         <div id="scrollProgress" class="scroll-progress-bar"></div>
     </div>
     <!-- Background with overlay -->
-    <div class="bg-layer" style="background-image: url('img/p0aRAGZ.png');" aria-hidden="true"></div>
+    <div class="bg-layer" aria-hidden="true"></div>
 
     <!-- Content -->
     <div class="content">
@@ -297,7 +297,10 @@
         <section id="inicio" class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-content scroll-reveal">
-                    <h1 class="hero-title">Olá, sou <span class="animated-name-loader">
+                    <p class="hero-kicker">PORTFÓLIO <span></span> TECNOLOGIA <span></span> WEB</p>
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="hero-greeting">Olá, sou</span>
+                        <span class="animated-name-loader" role="img" aria-label="Enio Gama">
                         <svg height="0" width="0" viewBox="0 0 600 120" class="absolute">
                             <defs xmlns="http://www.w3.org/2000/svg">
                                 <linearGradient gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="120" x1="0" id="gradient-name">
@@ -331,13 +334,17 @@
                             </style>
                         </svg>
                     </span></h1>
-                    <p class="hero-subtitle">Técnico de Informática • Desenvolvedor Web</p>
-                    <p class="hero-description">Especializado em manutenção de hardware, redes e desenvolvimento web. Transformo desafios técnicos em soluções elegantes e eficientes.</p>
+                    <div class="hero-title-accent" aria-hidden="true"></div>
+                    <p class="hero-subtitle">
+                        <span>Técnico de Informática</span>
+                        <span class="subtitle-divider">·</span>
+                        <span>Desenvolvedor Web</span>
+                    </p>
+                    <p class="hero-description">Transformo desafios tecnológicos em soluções práticas, elegantes e eficientes — da manutenção de equipamentos e redes ao desenvolvimento web.</p>
 
                     <!-- CTA Buttons -->
                     <div class="hero-cta">
-                        <a href="#portfolio" class="Projects-Button-Link">
-                            <button class="Projects-Button">
+                        <a href="#portfolio" class="Projects-Button-Link Projects-Button" aria-label="Ver projetos">
                                 <span class="IconContainer">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 259 259" class="svgBG">
                                         <circle stroke-width="7" stroke="#6699ff" r="69" cy="129.5" cx="129.5"></circle>
@@ -369,7 +376,6 @@
                                     </svg>
                                 </span>
                                 <span class="text">Ver Projetos</span>
-                            </button>
                         </a>
                         <a href="#contato" class="btn btn-secondary">Contactar</a>
                     </div>
@@ -390,14 +396,16 @@
 
                 <!-- Hero Image -->
                 <div class="hero-image scroll-reveal delay-200">
-                    <div class="glass-lg">
-                        <img src="img/enniogama.jpg" alt="Enio Gama" class="profile-img">
-                    </div>
+                        <div class="glass-lg">
+                            <img src="img/enniogama.jpg" alt="Enio Gama, Técnico de Informática e Desenvolvedor Web" class="profile-img">
+                        </div>
+                        <div class="hero-image-meta"><span>LUANDA, AO</span><span class="meta-line"></span><span>AVAILABLE FOR PROJECTS</span></div>
                 </div>
             </div>
 
             <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" aria-hidden="true">
+                <span>Explorar</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
         </section>
@@ -573,7 +581,7 @@
                 <h2 class="section-title">Projetos</h2>
                 <div class="portfolio-grid">
                     <article class="project-card glass-sm scroll-reveal">
-                        <div class="project-image" style="background-image: url('img/p0aRAGZ.png')"></div>
+                        <div class="project-image" style="background-image: url('img/LOGO1.jpg')"></div>
                         <div class="project-body">
                             <h3 class="project-title">Website E-commerce</h3>
                             <p class="project-desc">Plataforma de comércio com checkout integrado e painel administrativo.</p>
@@ -595,7 +603,7 @@
                         <div class="project-body">
                             <h3 class="project-title">Campanha Publicitária</h3>
                             <p class="project-desc">Edição avançada de imagens para marketing e branding.</p>
-                            <a href="#" class="project-link">Ver Projeto →</a>
+                            <a href="https://github.com/enniogama11" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
                         </div>
                     </article>
                 </div>
@@ -664,7 +672,7 @@
         <!-- Footer -->
         <footer class="site-footer">
             <div class="container">
-                <p class="footer-text">© 2025 Enio Gama — Técnico de Informática & Desenvolvedor Web</p>
+                <p class="footer-text">© 2026 Enio Gama — Técnico de Informática & Desenvolvedor Web</p>
             </div>
         </footer>
     </div>
